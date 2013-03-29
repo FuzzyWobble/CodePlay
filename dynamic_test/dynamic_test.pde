@@ -121,6 +121,13 @@ void draw(){
       image(monsterImg,posX,posY,110,110);
     break;
     
+    // circle -------------------------------------------------------   
+    case 8: 
+      posX = width/2 + cos(millis()/100.0)*mouseY;
+      posY = height/2 + sin(millis()/100.0)*mouseY;
+      image(monsterImg,posX,posY,110,110);
+    break;
+    
     
     // default -------------------------------------------------------
     default: 
@@ -159,6 +166,9 @@ switch(key) {
     break;
   case '7':
     dynamicMode = 7;  
+    break;
+  case '8':
+    dynamicMode = 8;  
     break;
   default:
     break;
